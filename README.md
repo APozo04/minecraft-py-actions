@@ -1,3 +1,5 @@
+[![codecov]([![codecov](https://codecov.io/gh/APozo04/minecraft-py-actions/graph/badge.svg?token=HKLF1MQHO3)](https://codecov.io/gh/APozo04/minecraft-py-actions))
+
 # Minecraft Agent Framework
 
 This project is part of a university assignment at the **Universitat Rovira i Virgili** in Tarragona. The goal of this task is to develop a Python framework that enables the creation and execution of Python-coded agents in a shared Minecraft server. These agents are able to interact with the Minecraft world by moving, building, destroying blocks, and interacting with the chat.
