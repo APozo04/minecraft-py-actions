@@ -1,0 +1,5 @@
+htmlcov/
+minecraft_py_actions.egg-info/
+__pycache__/
+*.pyc
+.coverage
