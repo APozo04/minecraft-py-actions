@@ -1,4 +1,4 @@
-[![codecov]([![codecov](https://codecov.io/gh/APozo04/minecraft-py-actions/graph/badge.svg?token=HKLF1MQHO3)](https://codecov.io/gh/APozo04/minecraft-py-actions))
+[![codecov]([![codecov](https://codecov.io/gh/APozo04/minecraft-py-actions/graph/badge.svg?token=HKLF1MQHO3)](https://codecov.io/gh/APozo04/minecraft-py-actions))]
 
 # Minecraft Agent Framework
 
