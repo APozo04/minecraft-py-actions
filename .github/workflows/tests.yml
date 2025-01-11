@@ -32,9 +32,8 @@ jobs:
           coverage html
           coverage xml
 
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: coverage.xml
-
+          slug: APozo04/minecraft-py-actions
