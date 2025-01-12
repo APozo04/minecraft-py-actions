@@ -51,9 +51,31 @@ To ensure the correct functionality of the bots outside the Minecraft environmen
 
 This setup is particularly useful for continuous integration workflows. Using **GitHub Actions**, the tests can be automatically executed on each commit or pull request. The test results are then synchronized with **Codecov**, ensuring that the coverage badge displayed at the top of this document remains up-to-date with each change.
 
-### Running Tests Locally
 
-1. **Install Testing Dependencies**:
-   Ensure you have `unittest` (comes with Python's standard library) and any other necessary testing libraries installed. If additional libraries are required, install them using `pip`:
-   ```bash
-   pip install -r requirements-test.txt
+## Minecraft Server Setup
+
+To run the Minecraft server and interact with the agent scripts, follow these steps:
+
+1. **Download and Install Minecraft Server**:
+   - Download the appropriate server package from the [Adventures in Minecraft GitHub repository for Linux/macOS](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-Linux) or the [Adventures in Minecraft GitHub repository for Windows](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-PC).
+   - Ensure you have **Java 8** installed, as the server requires this version of Java to run correctly. If you have a newer version, you might need to install Java 8 or configure the server to use it.
+   - Make sure you are using the Minecraft version specified in the repository (most likely **Minecraft 1.12**) to ensure compatibility with the server and the Python scripts.
+
+2. **Set the Repository Location**:
+   - Place the folder of this repository (`minecraft-py-actions-main`) inside the `Adventures in Minecraft` folder as shown in the image below:
+
+     ![Repository Placement](./img/minecraft-py-actions-ubication.png)
+
+3. **Start the Server**:
+   - Open the `startServer.bat` (Windows) or `startServer.sh` (Linux/macOS) file from the Minecraft server directory to start the server. 
+   - After a few seconds, the server will be up and running, and you can interact with it in the game.
+
+4. **Install Python Dependencies**:
+   - You need to install the required Python libraries using `pip`. Specifically, the `mcpi` library will allow Python to interact with the Minecraft server.
+   - Install the library by running the following command:
+     ```bash
+     pip install mcpi
+     ```
+
+5. **Run the Python Scripts**:
+   - Clone this repository and execute the Python scripts in your terminal or Python environment. The scripts interact with the Minecraft server to execute actions based on your Python code.
