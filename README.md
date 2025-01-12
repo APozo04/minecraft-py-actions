@@ -70,12 +70,12 @@ To run the Minecraft server and interact with the agent scripts, follow these st
    - Open the `startServer.bat` (Windows) or `startServer.sh` (Linux/macOS) file from the Minecraft server directory to start the server. 
    - After a few seconds, the server will be up and running, and you can interact with it in the game.
 
-4. **Install Python Dependencies**:
-   - You need to install the required Python libraries using `pip`. Specifically, the `mcpi` library will allow Python to interact with the Minecraft server.
-   - Install the library by running the following command:
+3. **Handle Missing Dependencies**:
+   - If any path-related issues occur when running a bot, navigate to the repository folder (`minecraft-py-actions-main`) and execute the following command:
      ```bash
-     pip install mcpi
+     pip install -e .
      ```
+   - This is necessary because the repository uses a `pyproject.toml` file to define its dependencies and configuration. The `pip install -e .` command ensures that the dependencies are installed in editable mode, allowing the bots to function correctly.
 
 5. **Run the Python Scripts**:
-   - Clone this repository and execute the Python scripts in your terminal or Python environment. The scripts interact with the Minecraft server to execute actions based on your Python code.
+   - Execute the Python scripts in your terminal or Python environment. The scripts interact with the Minecraft server to execute actions based on your Python code.
