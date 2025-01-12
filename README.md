@@ -9,10 +9,37 @@ This project is part of a university assignment at the **Universitat Rovira i Vi
 - **Reflective Programming**: The codebase also incorporates examples of reflective programming, allowing dynamic analysis and manipulation of objects and methods in the game, making the system highly flexible and extensible.
   
 ## Example Agents
-Here are some examples of agents that can be created using this framework:
-- **InsultBot**: This bot insults players in the chat to bother users.
-- **TNTBot**: This agent places TNT and causes explosions, adding an element of chaos to the game.
-- **OracleBot**: This bot answers questions in the chat using a predefined list of answers or even integrates with AI models like ChatGPT.
+
+The bots must be initialized by running their respective Python programs. Once running, they can be stopped by entering the corresponding command in the Minecraft chat.
+
+- **CoordsBot**:
+  When this bot is active, it responds to the following four messages in the Minecraft chat:
+  - **getcoords**: Provides the player's current coordinates.
+  - **getpositivecoords**: Provides the player's current coordinates but ensures all three values are positive.
+  - **getnegativecoords**: Provides the player's current coordinates but ensures all three values are negative.
+
+  Thanks to this flow, we can incorporate functional programming using `map`, `list`, and lambda expressions.
+
+- **InsultBot**:
+  This bot uses a predefined list of 10 insults (modifiable during execution in the game using reflective programming). It posts insults from the list randomly to the Minecraft chat at an initial frequency of 5 seconds (this frequency can also be changed during execution). 
+
+  Additionally, the bot includes a set of **transformations** that can be applied to the insults. These transformations are stored in a list, with a total of 7 available, and are implemented using functional programming with lambda expressions. During execution, the player can decide which transformation to apply to the existing insults.
+
+  When this bot is active, it responds to the following eight messages in the Minecraft chat:
+  - **setinsultfreq**: Sets the frequency (in seconds) of the bot's insults (maximum of 10 seconds to ensure proper synchronization, as a long delay could result in an unreasonable execution time).
+  - **listtransformations**: Displays the list of all available transformations and pauses the bot's execution.
+  - **helpinsult**: Displays a list of all commands that can be used to interact with the bot and pauses the bot's execution.
+  - **continueinsult**: Resumes the bot's execution if it was paused using `helpinsult` or `listtransformations`.
+  - **settransformation**: Selects a transformation from the list of transformations to apply to the insults.
+  - **addinsult**: Adds an insult to the list of insults.
+  - **parainsultbot**: Completely stops the bot's execution (terminates the program).
+
+- **TNTBot**:
+  This bot places a TNT block and ignites it with fire directly beneath the player's position, within a radius of 5 blocks forward, backward, and to the sides. The TNT placement occurs at an initial frequency of 5 seconds (this frequency can also be adjusted).
+
+  When this bot is active, it responds to the following two messages in the Minecraft chat:
+  - **settntfreq**: Sets the frequency (in seconds) at which the bot places TNT (maximum of 10 seconds to ensure proper synchronization).
+  - **paratntbot**: Completely stops the bot's execution.
 
 ## Minecraft Server Setup
 
