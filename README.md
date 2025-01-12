@@ -57,7 +57,7 @@ This setup is particularly useful for continuous integration workflows. Using **
 To run the Minecraft server and interact with the agent scripts, follow these steps:
 
 1. **Download and Install Minecraft Server**:
-   - Download the appropriate server package from the [Adventures in Minecraft GitHub repository for Linux/macOS](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-Linux) or the [Adventures in Minecraft GitHub repository for Windows](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-PC).
+   - Download the appropriate server package from the [Adventures in Minecraft GitHub repository for Linux](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-Linux) or the [Adventures in Minecraft GitHub repository for Windows](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-PC).
    - Ensure you have **Java 8** installed, as the server requires this version of Java to run correctly. If you have a newer version, you might need to install Java 8 or configure the server to use it.
    - Make sure you are using the Minecraft version specified in the repository (most likely **Minecraft 1.12**) to ensure compatibility with the server and the Python scripts.
 
