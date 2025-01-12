@@ -41,29 +41,19 @@ The bots must be initialized by running their respective Python programs. Once r
   - **settntfreq**: Sets the frequency (in seconds) at which the bot places TNT (maximum of 10 seconds to ensure proper synchronization).
   - **paratntbot**: Completely stops the bot's execution.
 
-## Minecraft Server Setup
+## Testing
 
-To run the Minecraft server and interact with the agent scripts, follow these steps:
+To ensure the correct functionality of the bots outside the Minecraft environment, each bot has specific tests. The bot programs are designed to detect whether they are being executed directly or invoked from a test. 
 
-1. **Download and Install Minecraft Server**:
-   - Download the appropriate server package from the [Adventures in Minecraft GitHub repository for Linux/macOS](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-Linux) or the [Adventures in Minecraft GitHub repository for Windows](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-PC).
-   - Ensure you have **Java 8** installed, as the server requires this version of Java to run correctly. If you have a newer version, you might need to install Java 8 or configure the server to use it.
-   - Make sure you are using the Minecraft version specified in the repository (most likely **Minecraft 1.12**) to ensure compatibility with the server and the Python scripts.
+- **Direct Execution**: When a bot is run directly (e.g., `python coordsbot.py`), it executes its standard functionality within the Minecraft environment.
+  
+- **Test Execution**: When a bot is executed via its test suite, it utilizes the `MinecraftMock` class located in the `mocks` folder of the repository. This mock class simulates interactions with the Minecraft server, allowing the tests to run without requiring the actual server to be active.
 
-2. **Set the Repository Location**:
-   - Place the folder of this repository (`minecraft-py-actions-main`) inside the `Adventures in Minecraft` folder as shown in the image below:
-     ![Repository Placement](./img/minecraft-py-actions-ubication.png)
+This setup is particularly useful for continuous integration workflows. Using **GitHub Actions**, the tests can be automatically executed on each commit or pull request. The test results are then synchronized with **Codecov**, ensuring that the coverage badge displayed at the top of this document remains up-to-date with each change.
 
-3. **Start the Server**:
-   - Open the `startServer.bat` (Windows) or `startServer.sh` (Linux/macOS) file from the Minecraft server directory to start the server. 
-   - After a few seconds, the server will be up and running, and you can interact with it in the game.
+### Running Tests Locally
 
-4. **Install Python Dependencies**:
-   - You need to install the required Python libraries using `pip`. Specifically, the `mcpi` library will allow Python to interact with the Minecraft server.
-   - Install the library by running the following command:
-     ```bash
-     pip install mcpi
-     ```
-
-5. **Run the Python Scripts**:
-   - Clone this repository and execute the Python scripts in your terminal or Python environment. The scripts interact with the Minecraft server to execute actions based on your Python code.
+1. **Install Testing Dependencies**:
+   Ensure you have `unittest` (comes with Python's standard library) and any other necessary testing libraries installed. If additional libraries are required, install them using `pip`:
+   ```bash
+   pip install -r requirements-test.txt
