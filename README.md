@@ -72,6 +72,7 @@ To run the Minecraft server and interact with the agent scripts, follow these st
 
 3. **Handle Missing Dependencies**:
    - If any path-related issues occur when running a bot, navigate to the repository folder (`minecraft-py-actions-main`) and execute the following command:
+     
      ```bash
      pip install -e .
      ```
