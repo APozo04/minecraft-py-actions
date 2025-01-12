@@ -17,6 +17,7 @@ The bots must be initialized by running their respective Python programs. Once r
   - **getcoords**: Provides the player's current coordinates.
   - **getpositivecoords**: Provides the player's current coordinates but ensures all three values are positive.
   - **getnegativecoords**: Provides the player's current coordinates but ensures all three values are negative.
+  - **paracoordsbot**: Completely stops the bot's execution.
 
   Thanks to this flow, we can incorporate functional programming using `map`, `list`, and lambda expressions.
 
