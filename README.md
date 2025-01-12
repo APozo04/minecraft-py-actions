@@ -19,20 +19,24 @@ Here are some examples of agents that can be created using this framework:
 To run the Minecraft server and interact with the agent scripts, follow these steps:
 
 1. **Download and Install Minecraft Server**:
-   - Download the appropriate server package from the [Adventures in Minecraft GitHub repository](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-Linux).
+   - Download the appropriate server package from the [Adventures in Minecraft GitHub repository for Linux/macOS](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-Linux) or the [Adventures in Minecraft GitHub repository for Windows](https://github.com/AdventuresInMinecraft/AdventuresInMinecraft-PC).
    - Ensure you have **Java 8** installed, as the server requires this version of Java to run correctly. If you have a newer version, you might need to install Java 8 or configure the server to use it.
+   - Make sure you are using the Minecraft version specified in the repository (most likely **Minecraft 1.12**) to ensure compatibility with the server and the Python scripts.
 
-2. **Start the Server**:
+2. **Set the Repository Location**:
+   - Place the folder of this repository (`minecraft-py-actions-main`) inside the `Adventures in Minecraft` folder as shown in the image below:
+     ![Repository Placement](./img/minecraft-py-actions-ubication.png)
+
+3. **Start the Server**:
    - Open the `startServer.bat` (Windows) or `startServer.sh` (Linux/macOS) file from the Minecraft server directory to start the server. 
    - After a few seconds, the server will be up and running, and you can interact with it in the game.
 
-3. **Install Python Dependencies**:
+4. **Install Python Dependencies**:
    - You need to install the required Python libraries using `pip`. Specifically, the `mcpi` library will allow Python to interact with the Minecraft server.
    - Install the library by running the following command:
      ```bash
      pip install mcpi
      ```
 
-4. **Run the Python Scripts**:
+5. **Run the Python Scripts**:
    - Clone this repository and execute the Python scripts in your terminal or Python environment. The scripts interact with the Minecraft server to execute actions based on your Python code.
-
